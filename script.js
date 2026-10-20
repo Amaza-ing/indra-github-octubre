@@ -1,13 +1,32 @@
 const welcomeButton = document.querySelector("#welcome-button");
 const message = document.querySelector("#message");
+const themeToggle = document.querySelector("#theme-toggle");
 const hourHand = document.querySelector(".clock-hand-hour");
 const minuteHand = document.querySelector(".clock-hand-minute");
 const secondHand = document.querySelector(".clock-hand-second");
+
+const savedTheme = window.localStorage.getItem("theme");
+const initialTheme = savedTheme === "dark" ? "dark" : "light";
+document.documentElement.dataset.theme = initialTheme;
+updateThemeToggle(initialTheme);
 
 welcomeButton.addEventListener("click", () => {
   message.textContent = "¡Gracias por visitar mi página!";
   welcomeButton.textContent = "¡Listo!";
 });
+
+themeToggle.addEventListener("click", () => {
+  const nextTheme = document.documentElement.dataset.theme === "dark" ? "light" : "dark";
+  document.documentElement.dataset.theme = nextTheme;
+  window.localStorage.setItem("theme", nextTheme);
+  updateThemeToggle(nextTheme);
+});
+
+function updateThemeToggle(theme) {
+  const isDark = theme === "dark";
+  themeToggle.textContent = isDark ? "Activar tema claro" : "Activar tema oscuro";
+  themeToggle.setAttribute("aria-pressed", String(isDark));
+}
 
 function updateClock() {
   const now = new Date();
