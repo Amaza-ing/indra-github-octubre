@@ -9,6 +9,7 @@ Página web sencilla e interactiva creada con HTML, CSS y JavaScript nativos. Pr
 - **Reloj analógico:** muestra la hora local y actualiza sus agujas cada segundo.
 - **Diseño adaptable:** la tarjeta y el reloj ajustan su presentación a pantallas pequeñas.
 - **Saludo con GitHub Actions:** un workflow muestra un saludo por consola en cada `push` y también se puede ejecutar manualmente.
+- **Suite de pruebas:** verifica las interacciones y el reloj con el ejecutor nativo de Node.js, sin dependencias externas.
 
 
 ## Tecnologías
@@ -16,6 +17,7 @@ Página web sencilla e interactiva creada con HTML, CSS y JavaScript nativos. Pr
 - HTML5
 - CSS3
 - JavaScript (sin dependencias ni herramientas de compilación)
+- Node.js (solo para ejecutar las pruebas)
 
 ## Cómo ejecutar el proyecto
 
@@ -26,6 +28,14 @@ No es necesario instalar dependencias ni compilar el proyecto.
 
 También puedes servir la carpeta con una extensión de servidor local, como **Live Server** en Visual Studio Code, y abrir la dirección local que esta indique.
 
+## Ejecutar las pruebas
+
+Con Node.js instalado, ejecuta desde la carpeta del proyecto:
+
+```sh
+node --test test/script.test.js
+```
+
 ## Estructura del proyecto
 
 ```text
@@ -33,6 +43,8 @@ mi-web/
 ├── index.html    # Estructura y contenido de la página
 ├── styles.css    # Estilos, temas y diseño adaptable
 ├── script.js     # Interacciones y funcionamiento del reloj
+├── test/
+│   └── script.test.js  # Pruebas sin dependencias para las interacciones
 ├── README.md     # Documentación del proyecto
 └── .github/
     └── workflows/
