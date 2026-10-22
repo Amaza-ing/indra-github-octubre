@@ -24,7 +24,7 @@ themeToggle.addEventListener("click", () => {
 
 function updateThemeToggle(theme) {
   const isDark = theme === "dark";
-  themeToggle.textContent = isDark ? "Activar tema claro" : "Activar tema oscuro";
+  themeToggle.textContent = "Modo oscuro";
   themeToggle.setAttribute("aria-pressed", String(isDark));
 }
 

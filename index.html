@@ -9,14 +9,18 @@
   <script src="script.js" defer></script>
 </head>
 <body>
+  <header class="site-header">
+    <div class="site-header__inner">
+      <span class="site-name">MI PRIMER SITIO WEB</span>
+      <button id="theme-toggle" class="theme-toggle" type="button" aria-pressed="false">
+        Modo oscuro
+      </button>
+    </div>
+  </header>
   <main class="card">
-    <span class="eyebrow">MI PRIMER SITIO WEB</span>
     <h1>¡Hola, mundo!</h1>
     <p id="message">Una página sencilla, hecha con HTML, CSS y JavaScript.</p>
     <button id="welcome-button" type="button">Haz clic aquí</button>
-    <button id="theme-toggle" class="theme-toggle" type="button" aria-pressed="false">
-      Activar tema oscuro
-    </button>
   </main>
   <div class="clock" role="img" aria-label="Reloj analógico con la hora local">
     <span class="clock-number clock-number-12">12</span>
