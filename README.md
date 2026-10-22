@@ -1,4 +1,4 @@
-# Mi página web!!!!!!!!!!!!!
+# Mi página web
 
 Página web sencilla e interactiva creada con HTML, CSS y JavaScript nativos. Presenta un saludo, permite cambiar el tema visual y muestra un reloj analógico con la hora local.
 
