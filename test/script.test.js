@@ -115,7 +115,7 @@ test("el botón de bienvenida actualiza el mensaje y su etiqueta", () => {
 
   elements.get("#welcome-button").click();
 
-  assert.equal(elements.get("#message").textContent, "¡Gracias por visitar mi página!");
+  assert.equal(elements.get("#message").textContent, "¡Bienvenido de nuevo!");
   assert.equal(elements.get("#welcome-button").textContent, "¡Listo!");
 });
 
